@@ -1,7 +1,7 @@
-public class DNASoundFrequency {
+public class DNAWavelength {
     private DNA dna;
 
-    public DNASoundFrequency() {
+    public DNAWavelength() {
         this.dna = new DNA("");
     }
 
@@ -9,22 +9,22 @@ public class DNASoundFrequency {
         this.dna = dna;
     }
 
-    public int calculateFrequency() {
+    public int calculateWavelength() {
         String dnaSequence = dna.getSequence();
-        int frequency = 0;
+        int Wavelength = 0;
         for (int i = 0; i < dnaSequence.length(); i++) {
             if (dnaSequence.charAt(i) == 'A') {
-                frequency += 1;
+                Wavelength += 1;
             } else if (dnaSequence.charAt(i) == 'C') {
-                frequency += 2;
+                Wavelength += 2;
             } else if (dnaSequence.charAt(i) == 'G') {
-                frequency += 3;
+                Wavelength += 3;
             } else if (dnaSequence.charAt(i) == 'T') {
-                frequency += 4;
+                Wavelength += 4;
             } else {
                 throw new IllegalArgumentException("Invalid DNA sequence");
             }
         }
-        return frequency;
+        return Wavelength;
     }
 }
